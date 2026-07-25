@@ -561,6 +561,11 @@ with m1:
     for t in leg.get_texts(): t.set_color("#94a3b8")
     fig.subplots_adjust(left=0.08, right=0.98, bottom=0.12, top=0.95)
     st.pyplot(fig, use_container_width=True); plt.close(fig)
+    st.markdown("""
+    <div style="font-size: 11px; color: #64748b; margin-top: 10px; line-height: 1.45; text-align: left; border-top: 1px solid #111c30; padding-top: 8px;">
+        <strong>Interpretation:</strong> This plot projects 28-dimensional PCA transaction features onto a 2D space. Legitimate transactions (blue) cluster tightly around the normal centroid, while anomalous/fraudulent transactions (red) are scattered outliers. The inspected transaction is highlighted with a green star (★).
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 with m2:
