@@ -800,7 +800,6 @@ for _, r in disp_view.iterrows():
       <td style="color:#64748b;font-family:monospace;font-size:12px;">{ad:.3f}</td>
       <td><span class="badge-status-p {badge}">{lbl}</span></td>
       <td><span class="badge-status-p {pb}">{pred}</span></td>
-      <td><span class="badge-status-p {tb}">{true_lbl}</span></td>
     </tr>"""
 
 st.markdown(f"""
@@ -809,7 +808,7 @@ st.markdown(f"""
     <thead><tr>
       <th>Transaction ID</th><th>Amount</th><th>Time</th>
       <th>Risk Score</th><th>Anomaly Dist</th><th>Risk Tier</th>
-      <th>Prediction</th><th>Actual</th>
+      <th>Prediction</th>
     </tr></thead>
     <tbody>{rows_html}</tbody>
   </table>
