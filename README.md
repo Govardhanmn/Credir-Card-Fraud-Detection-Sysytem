@@ -14,8 +14,6 @@ Credit card fraud causes billions in annual losses through direct chargebacks, c
 
 The dataset contains anonymized European credit card transactions from a 48-hour window. Due to PCI-DSS compliance requirements, raw transaction fields are transformed into PCA components. The dataset exhibits extreme class imbalance, with fraud accounting for less than 0.2% of all transactions.
 
-> Download `creditcard.csv` from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place it in the project root.
-
 ---
 
 ## Approach
@@ -38,24 +36,6 @@ MDD_CC/
 ├── build_professional_mdd.py                  # MDD document generator
 ├── MDD_CreditCardFraud_Professional.docx      # Model Design Document
 └── README.md
-```
-
----
-
-## Tech Stack
-
-`pandas` · `numpy` · `scikit-learn` · `imbalanced-learn` · `xgboost` · `tensorflow` · `streamlit`
-
----
-
-## Getting Started
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost tensorflow streamlit
-
-jupyter notebook Credit_Card_Fraud_Detection_Simple.ipynb
-```
-
 ---
 
 ## Dashboard
@@ -65,19 +45,3 @@ The trained model powers **FraudGuard AI**, an interactive Streamlit operations 
 - **Live Batch Scoring** — Upload a CSV of transactions and get instant fraud predictions with risk scores
 - **PCA Visualization** — Interactive scatter plot of the latent feature space, with normal and fraudulent transactions highlighted in distinct colors for quick visual triage
 - **Analyst Review Panel** — Drill into individual flagged transactions, inspect feature values, view a risk gauge, and issue manual Approve or Decline decisions that update in real time
-
-```bash
-streamlit run fraudguard.py
-```
-
----
-
-## Documentation
-
-A full Model Design Document (MDD v3.1) is included, covering the complete methodology, model specifications, and financial impact analysis.
-
-📎 [`MDD_CreditCardFraud_Professional.docx`](./MDD_CreditCardFraud_Professional.docx)
-
----
-
-*Status: Production Deployed | July 2026*
